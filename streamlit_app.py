@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="HDB Rental Price Predictor", page_icon="🏠", layout="wide")
+st.set_page_config(page_title="HDB Rental Price Predictor", layout="wide")
 
 MODEL_RMSE_SGD = 508.39
 MODEL_FILE = Path("rental_price_model.joblib")
@@ -73,7 +73,7 @@ def validate_inputs(year, month):
         return False, "Month must be between 1 and 12."
     return True, ""
 
-st.title("🏠 Singapore HDB Rental Price Predictor")
+st.title("Singapore HDB Rental Price Predictor")
 st.caption("Predict monthly rent using your tuned Random Forest model.")
 
 df_ref = load_reference_data()
